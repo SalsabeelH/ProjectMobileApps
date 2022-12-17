@@ -11,8 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import birzeit.edu.projectmobileapps.adapters.MentalRecyclerAdapter;
 import birzeit.edu.projectmobileapps.databinding.FragmentNotificationsBinding;
-
+import birzeit.edu.projectmobileapps.model.MentalGame;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 public class NotificationsFragment extends Fragment {
 
@@ -25,8 +27,21 @@ public class NotificationsFragment extends Fragment {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final RecyclerView recyclerView = binding.mentalRecycler;
+        final RecyclerView recycler = binding.mentalRecycler;
+        recycler.setLayoutManager(new GridLayoutManager(getContext().getApplicationContext(), 2));
 
+        /*
+        fill array
+         */
+        String[] captions = new String[MentalGame.mental_games.length];
+        int[] ids = new int[MentalGame.mental_games.length];
+
+        for(int i = 0; i<captions.length;i++){
+            captions[i] = MentalGame.mental_games[i].getName();
+            ids[i] = MentalGame.mental_games[i].getImageID();
+        }
+        MentalRecyclerAdapter adapter = new MentalRecyclerAdapter(captions, ids);
+        recycler.setAdapter(adapter);
         return root;
     }
 
