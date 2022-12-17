@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private GifImageView gifImageView;
     private Animation animation1;
     private Animation animation2;
+    private Animation animation3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         Handler handler = new Handler();
         animation1 = AnimationUtils.loadAnimation(this,R.anim.animation_alpha);
-        animation2 = AnimationUtils.loadAnimation(this,R.anim.animation_scale);
+        animation2 = AnimationUtils.loadAnimation(this,R.anim.animation_alpha2);
+        animation3 = AnimationUtils.loadAnimation(this,R.anim.animation_scale);
         gifImageView = findViewById(R.id.gifImageView);
         gifImageView.setImageResource(R.drawable.checklist);
         gifImageView.startAnimation(animation1);
@@ -39,10 +41,8 @@ public class MainActivity extends AppCompatActivity {
         t.schedule(new TimerTask() {
             @Override
             public void run() {
-                animation1.setStartOffset(1500);
-                animation1.setDuration(1000);
                 gifImageView.setImageResource(R.drawable.fitness_gif);
-                gifImageView.startAnimation(animation1);
+                gifImageView.startAnimation(animation2);
             }
         }, 3500);
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 gifImageView.setImageResource(R.drawable.idea);
-                gifImageView.startAnimation(animation2);
+                gifImageView.startAnimation(animation3);
             }
         }, 6000);
         /**
