@@ -9,7 +9,7 @@ public class MentalGame {
 
     public static final MentalGame[] mental_games = {
             new MentalGame ("Calculations", R.drawable.calc),
-            new MentalGame ("Puzzels", R.drawable.puzzle),
+            new MentalGame ("Puzzles", R.drawable.puzzle),
             new MentalGame ("Find the difference", R.drawable.find)
 
     };
