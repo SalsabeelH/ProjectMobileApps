@@ -1,10 +1,12 @@
-package birzeit.edu.projectmobileapps;
+package birzeit.edu.projectmobileapps.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import birzeit.edu.projectmobileapps.R;
 
 /**
  * Splash Screen

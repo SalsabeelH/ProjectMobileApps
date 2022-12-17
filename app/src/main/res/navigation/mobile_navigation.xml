@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="birzeit.edu.projectmobileapps.ui.home.HomeFragment"
+        android:name="birzeit.edu.projectmobileapps.ui.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="birzeit.edu.projectmobileapps.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_physical"
+        android:name="birzeit.edu.projectmobileapps.ui.PhyicalFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_physical" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="birzeit.edu.projectmobileapps.ui.notifications.NotificationsFragment"
+        android:name="birzeit.edu.projectmobileapps.ui.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

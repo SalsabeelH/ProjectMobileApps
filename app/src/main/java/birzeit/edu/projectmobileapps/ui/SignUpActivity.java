@@ -1,4 +1,4 @@
-package birzeit.edu.projectmobileapps;
+package birzeit.edu.projectmobileapps.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import birzeit.edu.projectmobileapps.R;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -25,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
         signup_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(SignUpActivity.this,HomeActivity.class);
+                Intent intent=new Intent(SignUpActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }

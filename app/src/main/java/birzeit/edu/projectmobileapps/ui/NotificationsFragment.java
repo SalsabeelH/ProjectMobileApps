@@ -1,4 +1,4 @@
-package birzeit.edu.projectmobileapps.ui.dashboard;
+package birzeit.edu.projectmobileapps.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,23 +9,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
-import birzeit.edu.projectmobileapps.databinding.FragmentDashboardBinding;
+import birzeit.edu.projectmobileapps.databinding.FragmentNotificationsBinding;
 
-public class DashboardFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+public class NotificationsFragment extends Fragment {
+
+    private FragmentNotificationsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+
+        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final RecyclerView recyclerView = binding.mentalRecycler;
+
         return root;
     }
 

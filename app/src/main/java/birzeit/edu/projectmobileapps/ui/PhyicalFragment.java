@@ -1,4 +1,4 @@
-package birzeit.edu.projectmobileapps.ui.home;
+package birzeit.edu.projectmobileapps.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import birzeit.edu.projectmobileapps.databinding.FragmentHomeBinding;
+import birzeit.edu.projectmobileapps.databinding.FragmentPhysicalBinding;
 
-public class HomeFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+public class PhyicalFragment extends Fragment {
+
+    private FragmentPhysicalBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+
+        binding = FragmentPhysicalBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textDashboard;
         return root;
     }
 

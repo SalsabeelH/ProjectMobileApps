@@ -1,4 +1,4 @@
-package birzeit.edu.projectmobileapps;
+package birzeit.edu.projectmobileapps.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import birzeit.edu.projectmobileapps.R;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -30,7 +32,7 @@ public class LogInActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LogInActivity.this,HomeActivity.class);
+                Intent intent=new Intent(LogInActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
 
@@ -50,7 +52,7 @@ public class LogInActivity extends AppCompatActivity {
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LogInActivity.this,SignUpActivity.class);
+                Intent intent=new Intent(LogInActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 finish();
             }
