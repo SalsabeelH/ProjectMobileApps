@@ -13,6 +13,27 @@
         android:theme="@style/Theme.ProjectMobileApps"
         tools:targetApi="31">
         <activity
+            android:name=".PuzzleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DifferenceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CalculationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home">

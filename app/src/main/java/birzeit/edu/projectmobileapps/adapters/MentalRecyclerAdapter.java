@@ -1,5 +1,7 @@
 package birzeit.edu.projectmobileapps.adapters;
 import birzeit.edu.projectmobileapps.R;
+
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +41,7 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
         cardView.setOnClickListener( new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                //
+                cardView.setCardBackgroundColor(Color.parseColor("#EAEAEA"));
             }
         });
     }

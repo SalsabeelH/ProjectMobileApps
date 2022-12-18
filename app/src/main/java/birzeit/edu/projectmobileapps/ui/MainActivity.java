@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private Animation animation1;
     private Animation animation2;
     private Animation animation3;
+    private Animation animation4;
+    private TextView  appName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +36,14 @@ public class MainActivity extends AppCompatActivity {
         animation1 = AnimationUtils.loadAnimation(this,R.anim.animation_alpha);
         animation2 = AnimationUtils.loadAnimation(this,R.anim.animation_alpha2);
         animation3 = AnimationUtils.loadAnimation(this,R.anim.animation_scale);
+        animation4 = AnimationUtils.loadAnimation(this,R.anim.animation_top);
+
+        appName= findViewById(R.id.name_splash);
         gifImageView = findViewById(R.id.gifImageView);
         gifImageView.setImageResource(R.drawable.checklist);
         gifImageView.startAnimation(animation1);
+
+        appName.startAnimation(animation4);
 
         Timer t = new Timer();
         t.schedule(new TimerTask() {
@@ -44,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 gifImageView.setImageResource(R.drawable.fitness_gif);
                 gifImageView.startAnimation(animation2);
             }
-        }, 3500);
+        }, 1500);
 
         t.schedule(new TimerTask() {
             @Override
@@ -52,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 gifImageView.setImageResource(R.drawable.idea);
                 gifImageView.startAnimation(animation3);
             }
-        }, 6000);
+        }, 4000);
         /**
          * Post delayed
          * first param object from Runnable
@@ -69,6 +77,6 @@ public class MainActivity extends AppCompatActivity {
                  */
 
             }
-        }, 7500);
+        }, 6000);
     }
 }
