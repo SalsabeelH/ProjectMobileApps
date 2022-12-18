@@ -1,6 +1,8 @@
 package birzeit.edu.projectmobileapps.adapters;
 import birzeit.edu.projectmobileapps.R;
+import birzeit.edu.projectmobileapps.ui.DifferenceActivity;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -8,7 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
+import android.content.Intent;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,14 +23,16 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
     private String[] captions;
     private int[] imageIds;
 
+
     public MentalRecyclerAdapter(String[] captions, int[] imageIds){
         this.captions = captions;
         this.imageIds = imageIds;
+
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         CardView v = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.mental_item,parent, false);
-        return new ViewHolder(v);
+        return  new ViewHolder(v);
     }
 
     @Override
@@ -38,10 +43,25 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
         imageView.setImageDrawable(dr);
         TextView txt = (TextView)cardView.findViewById(R.id.txtName);
         txt.setText(captions[position]);
+
+
         cardView.setOnClickListener( new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 cardView.setCardBackgroundColor(Color.parseColor("#EAEAEA"));
+                // context in the adapter >> holder.itemView.getContext()
+                switch (position){
+                    case 0:{
+
+                        break;
+                    }
+                    case 1:{
+                        break;
+                    }
+                    case 2:{
+                        break;
+                    }
+                }
             }
         });
     }
