@@ -13,21 +13,21 @@
         android:theme="@style/Theme.ProjectMobileApps"
         tools:targetApi="31">
         <activity
-            android:name=".PuzzleActivity"
+            android:name=".ui.PuzzleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DifferenceActivity"
+            android:name=".ui.DifferenceActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CalculationActivity"
+            android:name=".ui.CalculationActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -40,7 +40,7 @@
         android:id="@+id/button3"
         android:layout_width="139dp"
         android:layout_height="52dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="casual"
         android:text="6"
         android:textSize="20sp"
@@ -59,24 +59,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="323dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:srcCompat="@drawable/img1_a" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="139dp"
         android:layout_height="52dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="casual"
         android:text="8"
         android:textSize="20sp"
@@ -88,14 +76,25 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="56dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="78dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
+        android:scrollbarSize="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_navigate_next_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="374dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img1_a" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

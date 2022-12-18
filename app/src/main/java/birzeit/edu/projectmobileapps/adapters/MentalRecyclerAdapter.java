@@ -1,6 +1,7 @@
 package birzeit.edu.projectmobileapps.adapters;
 import birzeit.edu.projectmobileapps.R;
 import birzeit.edu.projectmobileapps.ui.DifferenceActivity;
+import birzeit.edu.projectmobileapps.ui.MainActivity;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -44,7 +45,6 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
         TextView txt = (TextView)cardView.findViewById(R.id.txtName);
         txt.setText(captions[position]);
 
-
         cardView.setOnClickListener( new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -53,6 +53,8 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
                 switch (position){
                     case 0:{
 
+                        Intent intent=new Intent(holder.itemView.getContext(), DifferenceActivity.class);
+                        holder.itemView.getContext().startActivity(intent);
                         break;
                     }
                     case 1:{
