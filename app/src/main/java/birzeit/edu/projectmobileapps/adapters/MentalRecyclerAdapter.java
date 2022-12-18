@@ -53,14 +53,16 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
                 switch (position){
                     case 0:{
 
-                        Intent intent=new Intent(holder.itemView.getContext(), DifferenceActivity.class);
-                        holder.itemView.getContext().startActivity(intent);
+
                         break;
                     }
                     case 1:{
+
                         break;
                     }
                     case 2:{
+                        Intent intent=new Intent(holder.itemView.getContext(), DifferenceActivity.class);
+                        holder.itemView.getContext().startActivity(intent);
                         break;
                     }
                 }
