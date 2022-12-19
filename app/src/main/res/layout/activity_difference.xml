@@ -7,10 +7,10 @@
     tools:context=".ui.DifferenceActivity">
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/choice4"
         android:layout_width="139dp"
         android:layout_height="52dp"
-        android:layout_marginEnd="42dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="140dp"
         android:fontFamily="casual"
         android:text="5"
@@ -18,14 +18,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/choice2"
+        app:layout_constraintVertical_bias="0.802" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/choice3"
         android:layout_width="139dp"
         android:layout_height="52dp"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="44dp"
         android:layout_marginBottom="140dp"
         android:fontFamily="casual"
         android:text="7"
@@ -33,22 +33,22 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/choice1"
+        app:layout_constraintVertical_bias="0.8" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/choice2"
         android:layout_width="139dp"
         android:layout_height="52dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="casual"
         android:text="6"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/differenceImg" />
 
     <TextView
         android:id="@+id/textView4"
@@ -60,24 +60,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/choice1"
         android:layout_width="139dp"
         android:layout_height="52dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="casual"
         android:text="8"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/choice2"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/differenceImg" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="78dp"
-        android:layout_height="56dp"
+        android:id="@+id/next"
+        android:layout_width="89dp"
+        android:layout_height="66dp"
         android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
         android:scrollbarSize="8dp"
@@ -88,20 +88,20 @@
         app:srcCompat="@drawable/ic_baseline_navigate_next_24" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="409dp"
-        android:layout_height="374dp"
+        android:id="@+id/differenceImg"
+        android:layout_width="411dp"
+        android:layout_height="348dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img1_a" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="44dp"
-        android:layout_height="27dp"
+        android:id="@+id/back"
+        android:layout_width="41dp"
+        android:layout_height="21dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
