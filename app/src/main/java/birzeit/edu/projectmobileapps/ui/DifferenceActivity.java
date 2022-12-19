@@ -11,5 +11,8 @@ public class DifferenceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_difference);
+
+        //every -> show new item
+        //set button choices, image
     }
 }
