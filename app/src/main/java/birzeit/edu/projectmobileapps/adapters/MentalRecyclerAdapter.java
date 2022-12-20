@@ -1,7 +1,9 @@
 package birzeit.edu.projectmobileapps.adapters;
 import birzeit.edu.projectmobileapps.R;
+import birzeit.edu.projectmobileapps.ui.CalculationActivity;
 import birzeit.edu.projectmobileapps.ui.DifferenceActivity;
 import birzeit.edu.projectmobileapps.ui.MainActivity;
+import birzeit.edu.projectmobileapps.ui.PuzzleActivity;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -52,13 +54,17 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
                 // context in the adapter >> holder.itemView.getContext()
                 switch (position){
                     case 0:{
-
-
+                        Intent intent=new Intent(holder.itemView.getContext(), CalculationActivity.class);
+                        holder.itemView.getContext().startActivity(intent);
                         break;
+
+
                     }
                     case 1:{
-
+                        Intent intent=new Intent(holder.itemView.getContext(), PuzzleActivity.class);
+                        holder.itemView.getContext().startActivity(intent);
                         break;
+
                     }
                     case 2:{
                         Intent intent=new Intent(holder.itemView.getContext(), DifferenceActivity.class);
