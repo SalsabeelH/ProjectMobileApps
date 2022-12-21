@@ -35,16 +35,16 @@
         android:id="@+id/name_splash"
         android:layout_width="262dp"
         android:layout_height="82dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="148dp"
         android:fontFamily="casual"
         android:text="My Fitness"
-        android:textColor="@color/orange"
+        android:textColor="#E0961B"
         android:textSize="48sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!--    <pl.droidsonroids.gif.GifImageView-->
