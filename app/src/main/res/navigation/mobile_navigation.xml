@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_physical"
-        android:name="birzeit.edu.projectmobileapps.ui.PhyicalFragment"
+        android:name="birzeit.edu.projectmobileapps.ui.PhysicalFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_physical" />
 
