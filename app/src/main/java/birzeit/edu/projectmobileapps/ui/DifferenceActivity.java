@@ -8,19 +8,20 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import java.util.Random;
 import birzeit.edu.projectmobileapps.R;
 import birzeit.edu.projectmobileapps.model.Difference;
 
 public class DifferenceActivity extends AppCompatActivity {
 
-    private Button choice1;
-    private Button choice2;
-    private Button choice3;
-    private Button choice4;
+
+    private Button submit;
+    private EditText edtDiffernce;
     private ImageView differenceImg;
     private ImageView back;
     private ImageButton next;
@@ -34,13 +35,13 @@ public class DifferenceActivity extends AppCompatActivity {
 
         extracted();
         nextDispaly();
+
     }
 
     private void extracted() {
-        choice1=findViewById(R.id.choice1);
-        choice2=findViewById(R.id.choice2);
-        choice3=findViewById(R.id.choice3);
-        choice4=findViewById(R.id.choice4);
+
+        submit=findViewById(R.id.submit);
+        edtDiffernce=findViewById(R.id.edtDifference);
         differenceImg=findViewById(R.id.differenceImg);
         back=findViewById(R.id.back);
         next=findViewById(R.id.next);
@@ -63,27 +64,33 @@ public class DifferenceActivity extends AppCompatActivity {
     }
 
     private void nextDispaly(){
-        int diff_num,img_after,img_before;
+        int diff_num,img_after,img_before,len;
+        len=Difference.differences.length;
+        Random random = new Random();
+        edtDiffernce.setText("");
+        index=random.nextInt(len);
         diff_num=Difference.differences[index].getDifferenceNumber();
         img_after=Difference.differences[index].getImgAfter();
         img_before=Difference.differences[index].getImgBefore();
 
         Drawable drawable = getResources().getDrawable(img_before);
         differenceImg.setImageDrawable(drawable);
-        choice1.setText(diff_num-1+"");
-        choice2.setText(diff_num-2+"");
-        choice3.setText(diff_num+"");
-        choice4.setText(diff_num+1+"");
 
-        choice3.setOnClickListener(new View.OnClickListener() {
+
+       submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable drawable = getResources().getDrawable(img_after);
+                if(Integer.parseInt(edtDiffernce.getText().toString())==diff_num){
+                    Toast.makeText(DifferenceActivity.this,"True",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(DifferenceActivity.this,"False",Toast.LENGTH_LONG).show();
+                }
                 differenceImg.setImageDrawable(drawable);
             }
         });
 
-        index++;
+
         if(index>Difference.differences.length-1){
             index=0;
         }
