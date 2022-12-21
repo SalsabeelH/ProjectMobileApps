@@ -8,12 +8,18 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import birzeit.edu.projectmobileapps.adapters.MentalRecyclerAdapter;
+import birzeit.edu.projectmobileapps.adapters.PhysicalRecyclerAdapter;
 import birzeit.edu.projectmobileapps.databinding.FragmentPhysicalBinding;
+import birzeit.edu.projectmobileapps.model.MentalGame;
+import birzeit.edu.projectmobileapps.model.PhysicalExercise;
 
 
-public class PhyicalFragment extends Fragment {
+public class PhysicalFragment extends Fragment {
 
     private FragmentPhysicalBinding binding;
 
@@ -24,7 +30,12 @@ public class PhyicalFragment extends Fragment {
         binding = FragmentPhysicalBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
+        final RecyclerView recycler = binding.physicalRecycler;
+        recycler.setLayoutManager(new LinearLayoutManager(getContext().getApplicationContext()));
+
+        PhysicalRecyclerAdapter adapter = new PhysicalRecyclerAdapter(PhysicalExercise.physicalExercises);
+        recycler.setAdapter(adapter);
+
         return root;
     }
 
