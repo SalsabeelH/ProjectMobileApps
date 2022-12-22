@@ -1,5 +1,6 @@
 package birzeit.edu.projectmobileapps.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -8,13 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Locale;
+
 import birzeit.edu.projectmobileapps.R;
 import birzeit.edu.projectmobileapps.model.PhysicalExercise;
+import birzeit.edu.projectmobileapps.ui.PhysicalExerciseActivity;
 import pl.droidsonroids.gif.GifImageView;
 
 public class PhysicalRecyclerAdapter extends RecyclerView.Adapter<PhysicalRecyclerAdapter.ViewHolder> {
 
-    private PhysicalExercise[] exercises;
+    private final PhysicalExercise[] exercises;
 
     public PhysicalRecyclerAdapter(PhysicalExercise[] exercises) {
         this.exercises = exercises;
@@ -35,9 +39,16 @@ public class PhysicalRecyclerAdapter extends RecyclerView.Adapter<PhysicalRecycl
         TextView exerciseName = cardView.findViewById(R.id.physical_exercise_name);
         exerciseName.setText(exercises[position].getName());
         TextView exerciseDuration = cardView.findViewById(R.id.physical_exercise_duration);
-        exerciseDuration.setText(exercises[position].getDuration() + " min");
+        int min = (int) exercises[position].getDuration();
+        int sec = (int) ((exercises[position].getDuration() - min) * 60);
+        exerciseDuration.setText(String.format(Locale.getDefault(), "%02d : %02d", min, sec));
         cardView.setOnClickListener(v -> {
-            //
+            Intent intent = new Intent(holder.itemView.getContext(), PhysicalExerciseActivity.class);
+            intent.putExtra("EXERCISE_NAME", exercises[position].getName());
+            intent.putExtra("EXERCISE_GIF", exercises[position].getGifID());
+            intent.putExtra("EXERCISE_DURATION", exercises[position].getDuration());
+            intent.putExtra("EXERCISE_STEPS", exercises[position].getSteps());
+            holder.itemView.getContext().startActivity(intent);
         });
     }
 
@@ -47,7 +58,7 @@ public class PhysicalRecyclerAdapter extends RecyclerView.Adapter<PhysicalRecycl
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private CardView cardView;
+        private final CardView cardView;
 
         public ViewHolder(CardView cardView) {
             super(cardView);

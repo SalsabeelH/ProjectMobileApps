@@ -4,18 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import birzeit.edu.projectmobileapps.adapters.MentalRecyclerAdapter;
 import birzeit.edu.projectmobileapps.adapters.PhysicalRecyclerAdapter;
 import birzeit.edu.projectmobileapps.databinding.FragmentPhysicalBinding;
-import birzeit.edu.projectmobileapps.model.MentalGame;
 import birzeit.edu.projectmobileapps.model.PhysicalExercise;
 
 
