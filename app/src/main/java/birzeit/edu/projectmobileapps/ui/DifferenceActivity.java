@@ -23,7 +23,6 @@ public class DifferenceActivity extends AppCompatActivity {
     private Button submit;
     private EditText edtDiffernce;
     private ImageView differenceImg;
-    private ImageView back;
     private ImageButton next;
     private Difference difference;
     private int index=0;
@@ -40,11 +39,10 @@ public class DifferenceActivity extends AppCompatActivity {
 
     private void extracted() {
 
-        submit=findViewById(R.id.submit);
-        edtDiffernce=findViewById(R.id.edtDifference);
-        differenceImg=findViewById(R.id.differenceImg);
-        back=findViewById(R.id.back);
-        next=findViewById(R.id.next);
+        submit = findViewById(R.id.submit);
+        edtDiffernce = findViewById(R.id.edtDifference);
+        differenceImg = findViewById(R.id.differenceImg);
+        next = findViewById(R.id.next);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,14 +51,6 @@ public class DifferenceActivity extends AppCompatActivity {
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(DifferenceActivity.this,MentalFragment.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     private void nextDispaly(){

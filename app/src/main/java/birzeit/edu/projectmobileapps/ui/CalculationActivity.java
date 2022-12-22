@@ -19,7 +19,6 @@ import android.widget.Toast;
 public class CalculationActivity extends AppCompatActivity {
 
     private TextView equation;
-    private ImageView past_page;
     private ImageView next_equ;
     private ImageView correct;
     private ImageView incorrect;
@@ -36,20 +35,11 @@ public class CalculationActivity extends AppCompatActivity {
 
     private void extracted() {
         equation=findViewById(R.id.tvEquation);
-        past_page=findViewById(R.id.pastPage);
         next_equ=findViewById(R.id.nextEquation);
         correct=findViewById(R.id.correct);
         incorrect=findViewById(R.id.incorrect);
         mProgressBar=(ProgressBar)findViewById(R.id.progressBar);
 
-        past_page.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(CalculationActivity.this,MentalFragment.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         next_equ.setOnClickListener(new View.OnClickListener() {
             @Override
