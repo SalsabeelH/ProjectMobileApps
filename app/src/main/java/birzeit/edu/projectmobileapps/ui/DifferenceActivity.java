@@ -80,13 +80,18 @@ public class DifferenceActivity extends AppCompatActivity {
        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable drawable = getResources().getDrawable(img_after);
-                if(Integer.parseInt(edtDiffernce.getText().toString())==diff_num){
-                    Toast.makeText(DifferenceActivity.this,"True",Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(DifferenceActivity.this,"False",Toast.LENGTH_LONG).show();
+                if(edtDiffernce.getText().toString().isEmpty()){
+                    Toast.makeText(DifferenceActivity.this,"Make sure to fill the number",Toast.LENGTH_LONG).show();
                 }
-                differenceImg.setImageDrawable(drawable);
+                else {
+                    Drawable drawable = getResources().getDrawable(img_after);
+                    if (Integer.parseInt(edtDiffernce.getText().toString()) == diff_num) {
+                        Toast.makeText(DifferenceActivity.this, "True", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(DifferenceActivity.this, "False", Toast.LENGTH_LONG).show();
+                    }
+                    differenceImg.setImageDrawable(drawable);
+                }
             }
         });
 

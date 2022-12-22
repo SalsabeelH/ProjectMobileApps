@@ -27,8 +27,8 @@ public class MentalFragment extends Fragment {
         View root = binding.getRoot();
 
         final RecyclerView recycler = binding.mentalRecycler;
-       recycler.setLayoutManager(new GridLayoutManager(getContext().getApplicationContext(), 2));
-        //recycler.setLayoutManager(new LinearLayoutManager(getContext().getApplicationContext()));
+       // recycler.setLayoutManager(new GridLayoutManager(getContext().getApplicationContext(), 2));
+        recycler.setLayoutManager(new LinearLayoutManager(getContext().getApplicationContext()));
         /*
         fill array
          */
