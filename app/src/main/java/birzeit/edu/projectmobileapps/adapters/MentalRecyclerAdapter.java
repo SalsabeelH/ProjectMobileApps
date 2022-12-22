@@ -1,5 +1,6 @@
 package birzeit.edu.projectmobileapps.adapters;
 import birzeit.edu.projectmobileapps.R;
+import birzeit.edu.projectmobileapps.model.Puzzle;
 import birzeit.edu.projectmobileapps.ui.CalculationActivity;
 import birzeit.edu.projectmobileapps.ui.DifferenceActivity;
 import birzeit.edu.projectmobileapps.ui.MainActivity;
@@ -61,13 +62,13 @@ public class MentalRecyclerAdapter extends RecyclerView.Adapter<MentalRecyclerAd
 
                     }
                     case 1:{
-                        Intent intent=new Intent(holder.itemView.getContext(), PuzzleActivity.class);
+                        Intent intent=new Intent(holder.itemView.getContext(), DifferenceActivity.class);
                         holder.itemView.getContext().startActivity(intent);
                         break;
 
                     }
                     case 2:{
-                        Intent intent=new Intent(holder.itemView.getContext(), DifferenceActivity.class);
+                        Intent intent=new Intent(holder.itemView.getContext(), PuzzleActivity.class);
                         holder.itemView.getContext().startActivity(intent);
                         break;
                     }
