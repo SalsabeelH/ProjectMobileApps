@@ -4,4 +4,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Physical</string>
     <string name="title_notifications">Mental</string>
+    <string name="welcomeText">Happy To See You Here!</string>
+    <string name="your_bmi_index">Your BMI Index</string>
 </resources>
