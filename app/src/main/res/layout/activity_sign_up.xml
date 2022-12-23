@@ -7,6 +7,18 @@
     tools:context=".ui.SignUpActivity">
 
     <ImageView
+        android:id="@+id/btn_to_main"
+        android:layout_width="65dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="4dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/right_arrow" />
+
+    <ImageView
         android:id="@+id/heightImageView"
         android:layout_width="46dp"
         android:layout_height="44dp"
