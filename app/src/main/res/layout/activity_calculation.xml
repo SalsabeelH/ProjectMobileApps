@@ -65,18 +65,18 @@
     <TextView
         android:id="@+id/tvEquation"
         style="@style/txtViewStyle"
-        android:layout_width="325dp"
-        android:layout_height="66dp"
+        android:layout_width="350dp"
+        android:layout_height="67dp"
         android:layout_marginTop="232dp"
         android:background="@drawable/txtborder"
         android:fontFamily="casual"
         android:gravity="center"
         android:hint="Equation"
         android:textColor="#1C1A1A"
-        android:textSize="28sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
 

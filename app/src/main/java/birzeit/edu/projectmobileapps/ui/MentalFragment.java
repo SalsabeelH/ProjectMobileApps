@@ -29,8 +29,8 @@ public class MentalFragment extends Fragment {
         final RecyclerView recycler = binding.mentalRecycler;
         //recycler.setLayoutManager(new GridLayoutManager(getContext().getApplicationContext(), 2));
         recycler.setLayoutManager(new LinearLayoutManager(getContext().getApplicationContext()));
-        /*
-        fill array
+        /**
+        Fill info before sent to recycler view
          */
         String[] captions = new String[MentalGame.mental_games.length];
         int[] ids = new int[MentalGame.mental_games.length];
@@ -39,6 +39,9 @@ public class MentalFragment extends Fragment {
             captions[i] = MentalGame.mental_games[i].getName();
             ids[i] = MentalGame.mental_games[i].getImageID();
         }
+        /**
+        Assign recyclerview adapter
+         */
         MentalRecyclerAdapter adapter = new MentalRecyclerAdapter(captions, ids);
         recycler.setAdapter(adapter);
         return root;

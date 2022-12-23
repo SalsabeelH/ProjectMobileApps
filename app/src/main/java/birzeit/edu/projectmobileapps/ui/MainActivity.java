@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 gifImageView.setImageResource(R.drawable.idea);
                 gifImageView.startAnimation(animation3);
             }
-        }, 4000);
+        }, 3500);
         /**
          * Post delayed
          * first param object from Runnable
@@ -77,6 +77,6 @@ public class MainActivity extends AppCompatActivity {
                  */
 
             }
-        }, 6000);
+        }, 5500);
     }
 }
