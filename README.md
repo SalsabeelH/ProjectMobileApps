@@ -1,6 +1,23 @@
 # My Fitness
-**My Fintness** is an application done as a part of term project for *Moblie Applications* course
+**My Fintness** is an application done as a part of term project for *Moblie Applications* course.It improves the human being's effectiveness on both the physical and mental levels by practicing different exercises
 ## Raneem
+1. Setup some configurations in the App
+  - Icon app
+  - Prevent changing orientation from the manifest
+  - Create bottom navigation with three fragments{home, physical, and mental}
+    
+ 2. Mental Fragment
+ 
+  That contains an image view, and a liner recyclerview, which contains cards representing some mental games that will transfer to different activities by clicking on    it.
+   - Calculation Activity
+         Contains a text view that represents a randomly generated equation with a horizontal progress bar to consume the time, and two buttons will show the result            status, after the time is finished the equation will be removed to make the game much harder.
+         Note: The timer is built by using the schedule function which happens in another thread.
+   
+   - Difference Activity 
+          This Activity contains an image that represents two images for computing the number of differences between them, an edit text for enetring the number of                 difference,  and a submit button to check if the enter answer is true or not by showing the image with determine the differences.
+   - Puzzle Activity
+           It will add soon, now it just contains a gif image
+
 ## Salsabeel
 1.	splash screen:
 I used three gif images and applied some Animations on them.
