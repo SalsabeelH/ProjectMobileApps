@@ -3,11 +3,9 @@ package birzeit.edu.projectmobileapps.model;
 import java.util.Random;
 
 /**
- * vars 2numbers,result,operation
- * 2 methods
- * 1-generate random num from 0-99
- * 2-generate random numbers from 0-999
- * 3-random operation
+ * vars 2numbers,result
+ * 1-generate random numbers from 0-99
+ * 2-generate result
  */
 public class Calculation {
     private int num1;

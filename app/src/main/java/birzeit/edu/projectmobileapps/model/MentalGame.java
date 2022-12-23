@@ -2,6 +2,9 @@ package birzeit.edu.projectmobileapps.model;
 
 import birzeit.edu.projectmobileapps.R;
 
+/**
+ * Mental games names with thier images
+ */
 public class MentalGame {
 
     private String name;

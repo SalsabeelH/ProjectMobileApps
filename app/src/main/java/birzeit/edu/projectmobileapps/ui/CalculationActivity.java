@@ -28,6 +28,7 @@ public class CalculationActivity extends AppCompatActivity {
     private ImageView incorrect;
     private ProgressBar progressBar;
     private int counter=0;
+    private int status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class CalculationActivity extends AppCompatActivity {
 
 
     /**
-     * Using another thread to consume the time
+     * Using another thread to consume the time for setting the progress bar
      */
     private void prog(){
 
@@ -79,7 +80,7 @@ public class CalculationActivity extends AppCompatActivity {
             }
         };
     /*
-    Using timer Schedule to achieve 3000ms->3s
+    Using timer Schedule to achieve 30*100=3000ms->3s
      */
     t.schedule(tt,0,30);
     }
@@ -91,10 +92,13 @@ public class CalculationActivity extends AppCompatActivity {
        Calculation calc=new Calculation();
        calc.generateRandom();
        calc.getResult();
-       int status=calc.getResStatus();
+       status=calc.getResStatus();
        String equ=calc.getNum1()+" * "+calc.getNum2()+" = "+calc.getAns();
        equation.setText(equ);
 
+        /**
+         * Check the corectness of the equation
+         */
         correct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,6 +111,9 @@ public class CalculationActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Check the incorectness of the equation
+         */
         incorrect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,7 +126,7 @@ public class CalculationActivity extends AppCompatActivity {
             }
         });
         /**
-         * This is an invidual timer uses to make a decision after a progressbar filled
+         * This is an invidual timer uses after a progressbar filled to clean the textview
          */
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {

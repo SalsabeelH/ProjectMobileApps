@@ -3,7 +3,7 @@ package birzeit.edu.projectmobileapps.model;
 import birzeit.edu.projectmobileapps.R;
 
 /**
- * Two images and buttons to display numbers of difference
+ * Two images and difference number
  */
 public class Difference {
     private int differenceNumber;
