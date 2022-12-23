@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText editTextHeight;
     private EditText editTextWeight;
     private EditText editTextTarget;
+    private ImageView btnReturnToMain;
     private Button signup_home;
     SharedPrefManager sharedPrefManager;
 
@@ -45,6 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
         rdGroup = findViewById(R.id.radioGroup);
         editTextTarget = findViewById(R.id.txt_target);
         signup_home = findViewById(R.id.btn_signup_home);
+        btnReturnToMain = findViewById(R.id.btn_to_main);
         sharedPrefManager = SharedPrefManager.getInstance(this);
     }
 
@@ -88,6 +91,15 @@ public class SignUpActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(SignUpActivity.this , validationDataMessage, Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        btnReturnToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(SignUpActivity.this, LogInActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
