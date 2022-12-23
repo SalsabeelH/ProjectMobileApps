@@ -63,13 +63,13 @@ public class SignUpActivity extends AppCompatActivity {
                 if(!editTextHeight.getText().toString().isEmpty())
                     height = Integer.parseInt(editTextHeight.getText().toString());
 
-                int weight = 0;
+                float weight = 0;
                 if(!editTextWeight.getText().toString().isEmpty())
-                    weight = Integer.parseInt(editTextWeight.getText().toString());
+                    weight = Float.parseFloat(editTextWeight.getText().toString());
 
-                int targetWeight = 0;
+                float targetWeight = 0;
                 if(!editTextTarget.getText().toString().isEmpty())
-                    targetWeight = Integer.parseInt(editTextTarget.getText().toString());
+                    targetWeight = Float.parseFloat(editTextTarget.getText().toString());
 
                 String gender = "";
                 int id = rdGroup.getCheckedRadioButtonId();
@@ -91,7 +91,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
-    private String dataValidation(String email, String password, String name, String gender, int age, int height, int weight, int targetWeight){
+    private String dataValidation(String email, String password, String name, String gender, int age, int height, float weight, float targetWeight){
         if (email.length() == 0 || !email.contains("@"))
             return "you need to enter a valid email";
         if (password.length() < 5 )
@@ -110,15 +110,15 @@ public class SignUpActivity extends AppCompatActivity {
             return "The Target Weight must be entered in kg";
         return "pass";
     }
-    private void writeToSharedPref(String email, String password, String name, String gender, int age, int height, int weight, int targetWeight){
+    private void writeToSharedPref(String email, String password, String name, String gender, int age, int height, float weight, float targetWeight){
         sharedPrefManager.writeString("email",email);
         sharedPrefManager.writeString("password",password);
         sharedPrefManager.writeString("name",name);
         sharedPrefManager.writeString("gender",gender);
         sharedPrefManager.writeInt("age",age);
         sharedPrefManager.writeInt("height",height);
-        sharedPrefManager.writeInt("weight",weight);
-        sharedPrefManager.writeInt("targetWeight",targetWeight);
+        sharedPrefManager.writeFloat("weight",weight);
+        sharedPrefManager.writeFloat("targetWeight",targetWeight);
     }
 
 }
